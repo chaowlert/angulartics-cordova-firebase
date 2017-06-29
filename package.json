@@ -1,0 +1,28 @@
+{
+  "name": "angulartics-cordova-firebase",
+  "version": "0.1.0",
+  "description": "Cordova Firebase plugin for Angulartics",
+  "author": "Chaowlert Chaisrichalermpol",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdirp dist && uglifyjs lib/angulartics-cordova-firebase.js --compress --source-map dist/angulartics-cordova-firebase.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-cordova-firebase.min.js.map -o dist/angulartics-cordova-firebase.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angulartics/angulartics-cordova-firebase"
+  },
+  "bugs": {
+    "url": "https://github.com/angulartics/angulartics-cordova-firebase/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angulartics": "~1.0.0"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "uglify-js": "^2.4.23"
+  }
+}
